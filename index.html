@@ -11,19 +11,24 @@
     (async function () {
       const bytes = await fetch(`https://hello-cloudflare.rainbowstack.workers.dev/`)
       const text = await bytes.text()
-        document.getElementById('title').textContent = text
+        document.getElementById('message').textContent = text
     })()
 </script>
 
   <body>
-  <section class="section">
-    <div class="container">
-      <h1 id="title" class="title">
-      </h1>
-    </div>
-  </section>
+    <section class="hero is-info bold is-large" style="height: 100vh">
 
-
-
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h1 class="title is-size-1">
+            Cloudflare Stack
+          </h1>
+          <p id="message" class="subtitle is-size-3">
+            
+          </p>
+        </div>
+      </div>
+   
+    </section>
   </body>
 </html>
